@@ -15,6 +15,29 @@
         <property name="url" value="jdbc:mariadb://169.56.78.217/3306/ttpdev"/>
         <property name="username" value="winvention "/>
         <property name="password" value="winwcms##"/>
+        <!--해당 풀이 시작될 때 생성할 커넥션 수, 최대 10개까지 가능-->
+        <property name="initialSize" value= "1"/>
+
+        <!--해당 풀에서 동시에 제공할 수 있는 최대 커넥션 수, 0은 무제한을 나타낸다.-->
+        <property name="maxActive" value="0" />
+
+        <!--해당 풀에서 동시에 휴면상태로 유지될 수 있는 최대 커넥션션 수. 0은 무제한을 나타낸다.-->
+        <property name="maxIdle" value="0"/>
+
+        <!--질의객체(statement)풀에서 동시에 제공할 수 있는 최대 PreparedStatement수. 0은 무제한-->
+        <property name="maxOpenPreparedStatements" value = "0"/>
+
+        <!--해당 풀에서 커넥션을 요청했을 때 대기 가능한 최대 시간(단위:ms). 이 시간 지나면 예외 발생. -1은 무한대기-->
+        <property name="maxWait" value="-1"/>
+
+        <!--해당 풀에서 커넥션을 제거하기 전에 휴면상태로 남아 있을 수 있는 시간-->
+        <property name="minEvictableIdleTimeMillis" value = "1000000000"/>
+
+        <!--해당 풀에서 커넥션이 휴면 상태로 유지될 수 있는 최소 커넥션 수-->
+        <property name="minIdle" value="1"/>
+
+        <!--PreparedStatement를 풀링할지 여부의 boolean 값-->
+        <property name="poolPreparedStatements" value="true"/>
     </bean>
 
 </beans>

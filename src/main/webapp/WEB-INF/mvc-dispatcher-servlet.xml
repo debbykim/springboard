@@ -7,6 +7,8 @@
 
     <context:component-scan base-package="com.board.Controller"/>
 
+
+    <!--Controller에서 넘겨주는 Request에 대해 설정한 후 값을 넘겨준다. -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
