@@ -17,7 +17,7 @@
 
 </head>
 <body>
-	<h1>${text}</h1>
+<h1>${text}</h1>
 
 <table>
 	<tr>
